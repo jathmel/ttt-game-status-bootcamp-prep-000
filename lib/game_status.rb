@@ -53,7 +53,7 @@ def winner(board)
   result = won?(board)
   new_arr = []
   if result == false
-    nil
+   return nil
   else
     result.each {|el| new_arr << board[el]}
   end

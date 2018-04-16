@@ -50,5 +50,7 @@ end
 
 def winner(board)
   return nil if full?(board) || draw?(board)
+  result = won
   # return "X" if won?.all? {|el
+  return "O"
 end

@@ -49,10 +49,14 @@ def over?(board)
 end
 
 def winner(board)
-  return nil if full?(board) || draw?(board)
+  # return nil if full?(board) || draw?(board)
   result = won?(board)
   new_arr = []
-  result.each {|el| new_arr << board[el]}
+  if result == false
+    nil
+  else
+    result.each {|el| new_arr << board[el]}
+  end
   return "X" if new_arr.all? {|el| el == "X"}
   return "O" if new_arr.all? {|el| el == "O"}
 end

@@ -49,5 +49,6 @@ def over?(board)
 end
 
 def winner(board)
-  
+  return nil if full?(board) || draw?(board)
+  # return "X" if won?.all? {|el
 end

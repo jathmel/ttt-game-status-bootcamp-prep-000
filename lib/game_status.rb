@@ -37,6 +37,6 @@ def won?(board)
 end
 
 def full?(board)
-  board.any? {|el| i == "" }
+  board.any? {|el| el == "" }
   
 end

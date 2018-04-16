@@ -49,10 +49,9 @@ def over?(board)
 end
 
 def winner(board)
-  # return nil if full?(board) || draw?(board)
   result = won?(board)
   new_arr = []
-  if result == false
+  if result == false || draw?(board)
    return nil
   else
     result.each {|el| new_arr << board[el]}

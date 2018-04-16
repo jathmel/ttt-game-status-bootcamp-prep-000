@@ -40,4 +40,6 @@ def full?(board)
   !board.include?(" ")
 end
 
-
+def draw?(board)
+  return true if 
+end

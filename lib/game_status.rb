@@ -50,7 +50,9 @@ end
 
 def winner(board)
   return nil if full?(board) || draw?(board)
-  result = won
-  # return "X" if won?.all? {|el
-  return "O"
+  result = won?(board)
+  new_arr = []
+  result.each {|el| new_arr << board[el]}
+  return "X" if new_arr.all? {|el| el == "X"}
+  return "O" if new_arr.all? {|el| el == "O"}
 end
